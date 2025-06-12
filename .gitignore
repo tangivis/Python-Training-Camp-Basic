@@ -6,3 +6,4 @@ answers/
 .idea/
 .venv/
 
+__pycache__/

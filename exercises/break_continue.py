@@ -19,17 +19,28 @@ def skip_multiples_of_three(n):
     """
     # 请在下方编写代码
     not3_multiple = []
-    i = 1;
 
-    while True:
-        if i > n:
-            break
+    # while break version:
+    # i = 1;
+    # while True:
+    #     if i > n:
+    #         break
 
-        if i % 3 == 0:
-            i += 1
+    #     if i % 3 == 0:
+    #         i += 1
+    #         continue
+
+    #     not3_multiple.append(i)
+    #     i += 1
+
+    # for loops version:
+    for num in range(1, n+1):
+        if num % 3 == 0:
             continue
-
-        not3_multiple.append(i)
-        i += 1
+        else:
+            not3_multiple.append(num)
 
     return not3_multiple
+
+    # one line version:
+    # return [i for i in range(1, n+1) if i % 3 != 0]
