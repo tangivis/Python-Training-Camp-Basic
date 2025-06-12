@@ -26,6 +26,7 @@ def skip_multiples_of_three(n):
             break
 
         if i % 3 == 0:
+            i += 1
             continue
 
         not3_multiple.append(i)
