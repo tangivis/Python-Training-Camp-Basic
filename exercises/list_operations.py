@@ -10,14 +10,26 @@
 def student_list_operations(students, operation, *args):
     """
     对学生列表进行操作
-    
+
     参数:
     - students: 学生列表
     - operation: 操作类型 ("add", "remove", "update")
     - args: 操作所需的额外参数
-    
+
     返回:
     - 操作后的学生列表
     """
     # 请在下方编写代码
-    pass 
+    if operation == "add":
+        for i in args:
+            students.append(i)
+
+    if operation == "remove":
+        for i in args:
+            students.remove(i)
+
+    if operation == "update":
+        i = students.index(args[0])
+        students[i] = args[1]
+
+    return students
